@@ -37,10 +37,13 @@ export default function ComingSoonPage() {
   }, [keyPoints.length])
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden overscroll-none touch-pan-y">
       <div className="absolute inset-0 z-0">
         <video autoPlay loop muted playsInline className="w-full h-full object-cover filter blur-sm">
-          <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/y2mate--Cool-black-Background_1080-LZUObOc2ESdRFe92DYAhRdrxX0YIvQ.mp4" type="video/mp4" />
+          <source
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/y2mate--Cool-black-Background_1080-LZUObOc2ESdRFe92DYAhRdrxX0YIvQ.mp4"
+            type="video/mp4"
+          />
         </video>
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-slate-900/60 to-blue-900/50"></div>
       </div>
@@ -54,9 +57,10 @@ export default function ComingSoonPage() {
               <Image
                 src="/logo.png"
                 alt="E File Xpert Logo"
-                width={120}
-                height={80}
+                width={150}
+                height={100}
                 className="transition-all duration-300 drop-shadow-2xl hover:scale-105"
+                priority
               />
             </div>
             <h1 className="text-2xl md:text-4xl font-bold text-white tracking-tight animate-slide-up drop-shadow-2xl">
