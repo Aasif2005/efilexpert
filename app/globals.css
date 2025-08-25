@@ -128,6 +128,32 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Prevent page dragging and white space on overscroll */
+    overscroll-behavior: none;
+    overflow-x: hidden;
+    position: relative;
+    /* Allow text selection for content areas */
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+
+  /* Prevent overscroll on html element */
+  html {
+    overscroll-behavior: none;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    /* Prevent touch actions that cause dragging */
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+    /* Additional overscroll prevention for mobile devices */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
